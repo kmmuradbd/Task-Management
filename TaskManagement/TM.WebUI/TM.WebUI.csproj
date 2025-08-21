@@ -149,6 +149,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="UIHtmlHelper">
+      <HintPath>..\..\..\SAMITIERP\SUNSAMITI.WebUI\bin\UIHtmlHelper.dll</HintPath>
+    </Reference>
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <HintPath>..\packages\WebActivatorEx.2.0.5\lib\net40\WebActivatorEx.dll</HintPath>
     </Reference>
@@ -173,6 +176,7 @@
     <Compile Include="App_Start\StructuremapMvc.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DependencyResolution\ControllerConvention.cs" />
     <Compile Include="DependencyResolution\DefaultRegistry.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
@@ -184,8 +188,34 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\custom-boostrap.css" />
+    <Content Include="Content\datepicker.css" />
+    <Content Include="Content\dropzone-basic.css" />
+    <Content Include="Content\dropzone.css" />
+    <Content Include="Content\ess-style.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\footable-demos.css" />
+    <Content Include="Content\footable.core.css" />
+    <Content Include="Content\fullcalendar.css" />
+    <Content Include="Content\homestyle.css" />
+    <Content Include="Content\select2.css" />
+    <Content Include="Content\select2.min.css" />
+    <Content Include="Content\selectyze.jquery.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="Content\style.css" />
+    <Content Include="Content\timepicki.css" />
+    <Content Include="Content\UserLogin.txt" />
+    <Content Include="Content\userstyle.css" />
+    <Content Include="Content\uy-style.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\footable.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\sourcesanspro-bold-webfont.svg" />
+    <Content Include="fonts\sourcesanspro-light-webfont.svg" />
+    <Content Include="fonts\sourcesanspro-regular-webfont.svg" />
+    <Content Include="fonts\sourcesanspro-semibold-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="images\admin.jpg" />
     <Content Include="images\arrow-right.svg" />
@@ -233,24 +263,70 @@
     <Content Include="images\trash.svg" />
     <Content Include="images\user.svg" />
     <Content Include="images\view.svg" />
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.esm.js" />
-    <Content Include="Scripts\bootstrap.esm.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\style.css.map" />
-    <None Include="Scripts\jquery-3.7.0.intellisense.js" />
-    <Content Include="Scripts\jquery-3.7.0.js" />
-    <Content Include="Scripts\jquery-3.7.0.min.js" />
-    <Content Include="Scripts\jquery-3.7.0.slim.js" />
-    <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\custom-datetime-validate.js" />
+    <Content Include="Scripts\dropzone.js" />
+    <Content Include="Scripts\footable.js" />
+    <Content Include="Scripts\footable.paginate.js" />
+    <Content Include="Scripts\footable.sort.js" />
+    <Content Include="Scripts\fullcalendar.js" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\footable.eot" />
+    <Content Include="fonts\footable.ttf" />
+    <Content Include="fonts\footable.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\sourcesanspro-bold-webfont.eot" />
+    <Content Include="fonts\sourcesanspro-bold-webfont.ttf" />
+    <Content Include="fonts\sourcesanspro-bold-webfont.woff" />
+    <Content Include="fonts\sourcesanspro-bold-webfont.woff2" />
+    <Content Include="fonts\sourcesanspro-light-webfont.eot" />
+    <Content Include="fonts\sourcesanspro-light-webfont.ttf" />
+    <Content Include="fonts\sourcesanspro-light-webfont.woff" />
+    <Content Include="fonts\sourcesanspro-light-webfont.woff2" />
+    <Content Include="fonts\sourcesanspro-regular-webfont.eot" />
+    <Content Include="fonts\sourcesanspro-regular-webfont.ttf" />
+    <Content Include="fonts\sourcesanspro-regular-webfont.woff" />
+    <Content Include="fonts\sourcesanspro-regular-webfont.woff2" />
+    <Content Include="fonts\sourcesanspro-semibold-webfont.eot" />
+    <Content Include="fonts\sourcesanspro-semibold-webfont.ttf" />
+    <Content Include="fonts\sourcesanspro-semibold-webfont.woff" />
+    <Content Include="fonts\sourcesanspro-semibold-webfont.woff2" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.nicescroll.js" />
+    <Content Include="Scripts\jquery.nicescroll.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\select2.js" />
+    <Content Include="Scripts\select2.min.js" />
+    <Content Include="Scripts\selectyze.jquery.js" />
+    <Content Include="Scripts\selectyze.jquery.min.js" />
+    <Content Include="Scripts\timepicki.js" />
+    <Content Include="Scripts\User\bootstrap.min.js" />
+    <Content Include="Scripts\User\datepicker.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\User\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\User\jquery.nicescroll.min.js" />
+    <Content Include="Scripts\scripts.js" />
+    <Content Include="Scripts\User\scripts.js" />
+    <Content Include="Scripts\uy.script.js" />
+    <None Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -267,6 +343,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_LoginLayout.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -275,14 +354,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Scripts\bootstrap.min.js.map" />
-    <Content Include="Scripts\bootstrap.js.map" />
-    <Content Include="Scripts\bootstrap.esm.min.js.map" />
-    <Content Include="Scripts\bootstrap.esm.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
-    <Content Include="Scripts\jquery-3.7.0.min.map" />
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TM.Core\TM.Core.csproj">

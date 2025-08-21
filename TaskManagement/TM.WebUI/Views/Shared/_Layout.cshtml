@@ -3,403 +3,259 @@
 @{
     TMIdentity identity = null;
 }
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - SG</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="/images/favicon.png" type="image/x-icon" rel="shortcut icon" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
-    @Styles.Render("~/Content/css")
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon">
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/Content/bootstrapcss")
+    @Styles.Render("~/Content/paginationcss")
+    @Styles.Render("~/Content/customcss")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrapjs")
     @Scripts.Render("~/bundles/modernizr")
-    <style>
-        .bc, .heading,
-        input:checked + .switch-box,
-        .rule input:checked + .rule-box,
-        .common-btn,
-        .datepicker td.active,
-        .datepicker td.active.active,
-        .dataTables_paginate a:hover,
-        .dataTables_paginate a.current,
-        .gender input:checked + .rule-box,
-        .identification input:checked + .rule-box,
-        .checkbox input:checked ~ .checkmark {
-            background-color: #0874bb;
-        }
+    @Scripts.Render("~/bundles/customjs")
+    @Scripts.Render("~/bundles/paginationjs")
+    <link href="~/Content/select2.css" rel="stylesheet" />
+    <script src="~/Scripts/js/select2.js"></script>
 
-        .rule input:checked + .rule-box, .gender input:checked + .rule-box,
-        .identification input:checked + .rule-box,
-        .checkbox input:checked ~ .checkmark {
-            border-color: #0874bb;
-        }
 
-        .pc,
-        .navbar ul li a,
-        .organisation-info h2 strong,
-        .datepicker th.switch,
-        .widget-head-title,
-        .notify-inner ul li div a,
-        .common-table thead th {
-            color: #0874bb
-        }
-    </style>
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar navbar-common">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="inde.html">
-                    <img src="images/logo.png" alt="">
-                </a>
-                <button class="navbar-toggler">
-                    <span class="navbar-icon"></span>
-                    <span class="navbar-icon"></span>
-                    <span class="navbar-icon"></span>
-                </button>
+    <div class="userLoginInfo hidden-xs">
+        <ul class="list-inline text-right">
+            @{
+                try
+                {
+                    identity = (TMIdentity)Thread.CurrentPrincipal.Identity;
+                    if (identity != null)
+                    {
+                        <li>Company:FRIEND'S GOAL' </li>
+                        <li>Branch: HEAD OFFICE </li>
+                        <li>Login as: @identity.Name</li>
+                    }
+                    else
+                    {
+                        HttpContext.Current.Response.Redirect("/Home");
+                    }
+                }
+                catch
+                {
+                    HttpContext.Current.Response.Redirect("/Home");
+                }
+            }
+        </ul>
+    </div>
 
-                <div class="navbar-collapse">
-                    <ul class="navbar-nav">
-                        @{
-                            if (Session["menu"] != null)
+    <div class="navbar navbar-inverse navbar-fixed-top hidden-xs" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="/Admin/Home">
+                    <img src="~/images/logo.png" alt="logo" width="150">
+                </a>
+            </div>
+            <div class="navbar-collapse collapse navbar-custom">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            @identity.Name
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/Login/ChangePassword"><i class="fa fa-user"></i>Change Password</a></li>
+                            <li><a href="/Login/Logout"><i class="fa fa-power-off"></i>Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="topMenu">
+        <a href="/Home">
+            <img src="~/images/logo.png" alt="logo" width="250">
+        </a><a class="topMenulink" href="#"><span><i class="fa fa-bars"></i></span></a>
+    </div>
+
+    <div class="navigation">
+        <ul id="mobileNav">
+            <li class="visible-xs">
+                <a href="#"><span class="glyphicon glyphicon-user"></span>@identity.Name<i class="fa fa-angle-right"></i></a>
+                <ul class="dropdown">
+                    <li><a href="#"><i class="fa fa-bell"></i>notification</a></li>
+                    <li><a href="/Login/Logout"><i class="fa fa-power-off"></i>Log Out</a></li>
+                </ul>
+            </li>
+            @{
+                if (Session["menu"] != null)
+                {
+                    var data = Session["menu"] as List<TM.Service.ViewModel.MasterMenuViewModel>;
+                    if (data != null)
+                    {
+                        foreach (var item in data.Where(w => w.ParentId == 0))
+                        {
+                            if (item.Id == 1)
                             {
-                                var data = Session["menu"] as List<TM.Service.ViewModel.MasterMenuViewModel>;
-                                if (data != null)
-                                {
-                                    foreach (var item in data.Where(w => w.ParentId == 0))
-                                    {
-                                        if (item.Id == 1)
+
+                                <li>
+                                    <a href="/Home"><i class="fa fa-home"></i>Home</a>
+
+                                </li>
+                            }
+                            else
+                            {
+                                <li>
+                                    <a href="#@item.Name"><span class="glyphicon glyphicon-briefcase"></span> @item.Name</a>
+                                    @{
+                                        var menulist = data.Where(w => w.ParentId == item.Id).ToList();
+                                        if (menulist.Count > 0)
                                         {
-                                            <li><a href="/Home"><img src="images/home.svg" alt=""> Dashboard</a></li>
+                                            <ul>
+                                                @foreach (var submenu in menulist)
+                                                {
+                                                    <li><a href="@submenu.URL"><span class="navbartxtcolor">@submenu.Name</span></a></li>
+                                                }
+                                            </ul>
                                         }
-                                        else
-                                        {
-                                            <li>
-                                                <a href="#"><img src="@item.Icon" alt=""> @item.Name</a>
-                                                @{
-                                                    var menulist = data.Where(w => w.ParentId == item.Id).ToList();
-                                                    if (menulist.Count > 0)
-                                                    {
+                                    }
+                                </li>
+
+                            }
+
+                        }
+                    }
+                }
+            }
+        </ul>
+
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <div class="panel-group" id="accordion">
+                    @{
+                        if (Session["menu"] != null)
+                        {
+                            var data = Session["menu"] as List<TM.Service.ViewModel.MasterMenuViewModel>;
+                            if (data != null)
+                            {
+                                foreach (var item in data.Where(w => w.ParentId == 0))
+                                {
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <p class="panel-title">
+                                                @if (item.Id == 1)
+                                                {
+                                                   <a href="/Home"><i class="fa fa-home"></i> Home</a>
+                                                }
+                                                else
+                                                {
+                                                    <a data-toggle="collapse" data-parent="#@item.Name" href="#@item.Name">
+                                                        <span class="glyphicon glyphicon-briefcase"></span> @item.Name
+                                                    </a>
+                                                }
+                                            </p>
+                                        </div>
+                                        @{
+                                            var menulist = data.Where(w => w.ParentId == item.Id).ToList();
+
+                                            if (menulist.Count > 0)
+                                            {
+
+                                                <div id="@item.Name" class="panel-collapse collapse">
+                                                    <div class="panel-body">
                                                         <ul>
                                                             @foreach (var submenu in menulist)
                                                             {
-                                                                <li><a href="@submenu.URL">@submenu.Name</a></li>
+                                                                <li>
+                                                                    <a id="@submenu.Id" href="@submenu.URL">
+                                                                        <span class="glyphicon glyphicon-usd"></span> @submenu.Name
+                                                                    </a>
+                                                                </li>
                                                             }
                                                         </ul>
-                                                    }
-                                                }
-                                            </li>
+                                                    </div>
+                                                </div>
+                                            }
                                         }
-                                    }
+                                    </div>
                                 }
                             }
                         }
-
-                    </ul>
-                    <ul>
-                        <li><a class="notify-btn" href="javascript:void();"><img src="images/bell.svg" alt=""> <span>5</span> </a></li>
-                        <li>
-                            @{
-                                try
-                                {
-                                    identity = (TMIdentity)Thread.CurrentPrincipal.Identity;
-                                    if (identity != null)
-                                    {
-                                        <a href="#">  @identity.Name</a>
-                                        <ul>
-                                            <li><a href="/Login/ChangePassword">Change Password</a></li>
-                                            <li><a href="/Login/Logout">Logout</a></li>
-                                        </ul>
-                                    }
-                                    else
-                                    {
-                                        HttpContext.Current.Response.Redirect("/Home");
-                                    }
-                                }
-                                catch
-                                {
-                                    HttpContext.Current.Response.Redirect("/Home");
-                                }
-                            }
-                        </li>
-                    </ul>
+                    }
                 </div>
 
             </div>
-        </nav>
-    </header>
-    <div class="heading">
-        <h3>Dashboard</h3>
-    </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main mainInner">
+                @RenderBody()
 
-    <main class="main">
-        @RenderBody()
-    </main>
-    <footer class="footer">
-        <div>Powered by <a href="https://softwaregaze.com/" target="_blank"><img src="~/images/logo.png" alt=""></a></div>
-        <ul>
-            <li>
-                <a href="#">FAQ</a>
-            </li>
-            <li>
-                <a href="#">Terms of use</a>
-            </li>
-            <li>
-                <a href="#">Privacy policy</a>
-            </li>
-        </ul>
-    </footer>
-    <div class="notify">
-        <div class="notify-close"></div>
-        <div class="notify-inner">
-            <ul>
-                <li>
-                    <div>New Policy Created by <a href="#">01779878433</a>, <a href="#">Khan Zahan</a></div>
-                    <a href="#" class="common-btn">APPROVE</a>
-                </li>
-                <li>
-                    <div>New Claim by <a href="#">01989723232</a> Approve Need</div>
-                    <a href="#" class="common-btn">APPROVE</a>
-                </li>
-                <li>
-                    <div>New Policy Created by <a href="#">01779878433</a>, <a href="#">Khan Zahan</a></div>
-                </li>
-            </ul>
-            <a href="#">Clear All</a>
+            </div>
         </div>
-        <div class="notify-overlay"></div>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/datepicker.js"></script>
-    <script src="js/scripts.js"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript">
-        $('.notify-btn,.notify-close,.notify-overlay').on('click', function (e) {
-            $('body').toggleClass('in');
-            $('.notify').toggleClass('notify-in');
-            e.stopPropagation();
-        });
-        $(".notify-inner").on('click', function (e) {
-            e.stopPropagation();
-        });
-    </script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
+
     <script>
-        $(document).ready(function () {
-            $('#example').DataTable();
-        });
-        Highcharts.chart('domains-list', {
-            chart: {
-                type: 'bar'
-            },
-            title: {
-                text: ''
-            },
-            xAxis: {
-                categories: ['Facebook', 'Youtube', 'Instagram', 'Espncricinfo', 'Twitter'],
-                title: {
-                    text: null
-                }
-            },
-
-            plotOptions: {
-                bar: {
-                    dataLabels: {
-                        enabled: true
-                    }
-                }
-            },
-            legend: {
-                layout: 'vertical',
-                align: 'right',
-                verticalAlign: 'top',
-                x: -40,
-                y: 80,
-                floating: true,
-                borderWidth: 1,
-                backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-                shadow: true
-            },
-            credits: {
-                enabled: false
-            },
-            colors: ['#4746AD'],
-            // series: [{
-            //     data: [30000, 15000, 12000, 9000, 4000],
-            //     showInLegend: false,
-            //     color: 'green'
-            // }]
-            series: [{
-                showInLegend: false,
-                data: [{
-                    y: 30000,
-                    color: '#1dd1a1'
-                }, {
-                    y: 15000,
-                    color: '#5f27cd'
-                },
-                {
-                    y: 12000,
-                    color: '#2e86de'
-                },
-                {
-                    y: 9000,
-                    color: '#01a3a4'
-                },
-                {
-                    y: 4000,
-                    color: '#ee5253'
-                }
-                ]
-            }]
-
+        $('.topMenulink').on('click', function (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation(); // Prevent all further handlers
+            $('.navigation').slideToggle(300);
         });
 
-        Highcharts.chart('container2', {
-            chart: {
-                type: 'column'
-            },
-            title: {
-                text: '658 Total'
-            },
-            xAxis: {
-                categories: ['Facebook', 'Youtube', 'Instagram', 'Espncricinfo', 'Twitter'],
-                title: {
-                    text: null
-                }
-            },
 
-            plotOptions: {
-                bar: {
-                    dataLabels: {
-                        enabled: true
-                    }
-                }
-            },
-            legend: {
-                layout: 'vertical',
-                align: 'right',
-                verticalAlign: 'top',
-                x: -40,
-                y: 80,
-                floating: true,
-                borderWidth: 1,
-                backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-                shadow: true
-            },
-            credits: {
-                enabled: false
-            },
-            colors: ['#4746AD'],
-            series: [{
-                showInLegend: false,
-                data: [{
-                    y: 35000,
-                    color: '#1dd1a1'
-                }, {
-                    y: 25000,
-                    color: '#5f27cd'
-                },
-                {
-                    y: 20000,
-                    color: '#2e86de'
-                },
-                {
-                    y: 15000,
-                    color: '#01a3a4'
-                },
-                {
-                    y: 10000,
-                    color: '#ee5253'
-                }
-                ]
-            }]
-        });
-
-        // Make monochrome colors
-        var pieColors = (function () {
-            var colors = [],
-                base = '#9A99E1',
-                i;
-
-            for (i = 0; i < 10; i += 1) {
-                // Start out with a darkened base color (negative brighten), and end
-                // up with a much brighter color
-                colors.push(Highcharts.Color(base).brighten((i - 3) / 7).get());
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.navigation, .topMenulink').length) {
+                $('.navigation').slideUp(300);
             }
-            return colors;
-        }());
-
-        // Build the chart
-        Highcharts.chart('onBoard', {
-            chart: {
-                type: 'pie',
-                events: {
-                    load: function () {
-                        var chart = this;
-                        var width = chart.plotWidth;
-                        var height = chart.plotHeight;
-
-                        // Add text in the center
-                        chart.renderer.text(
-                            '28873<br><span style="font-size:12px;color:#666">Total</span>',
-                            chart.plotLeft + width / 2,
-                            chart.plotTop + height / 2
-                        ).css({
-                            color: '#000',
-                            fontSize: '18px',
-                            textAlign: 'center'
-                        }).attr({
-                            align: 'center',
-                            zIndex: 5
-                        }).add();
-                    }
-                }
-            },
-            title: {
-                text: null
-            },
-            tooltip: {
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-            },
-            plotOptions: {
-                pie: {
-                    innerSize: '60%', // donut hole
-                    dataLabels: {
-                        enabled: true,
-                        format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
-                        distance: -50,
-                        filter: {
-                            property: 'percentage',
-                            operator: '>',
-                            value: 3
-                        }
-                    }
-                }
-            },
-            credits: {
-                enabled: false
-            },
-            series: [{
-                name: 'OnBoard',
-                data: [
-                    { name: 'Pending', y: 50.41, color: "#341f97" },
-                    { name: 'Settle', y: 21.84, color: "#10ac84" },
-                    { name: 'Cancel', y: 15.05, color: "#ee5253" }
-                ]
-            }]
+        });
+        $('#mobileNav li a').on('click', function () {
+            $(this).next('ul').slideToggle(300);
+            $(this).find('i.fa-angle-right').toggleClass('fa-angle-down');
+            e.stopPropagation();
+        });
+        $('#mobileNav li a').on('click', function () {
+            $(this).next('ul').slideToggle();
+            $(this).find('i').toggleClass('fa fa-angle-right fa fa-angle-down');
         });
 
+        $('#category-tabs li a').on('click', function () {
+            $(this).next('ul').slideToggle();
+            $(this).find('i').toggleClass('fa fa-angle-right fa fa-angle-down');
+        });
 
+        $('.sidebar ul li ul li').on('click', function () {
+            $('.sidebar ul li ul li').removeClass("active")
+            $(this).addClass("active")
+        });
 
+        $('.itemPagination ul li ul li').on('click', function () {
+            $('.itemPagination ul li ul li').removeClass("active")
+            $(this).addClass("active")
+        });
 
+        $('.sidebar ul li a').on('click', function () {
+            $(".innerSection:not(.employeeCode)").hide();
+            $('#menu_' + $(this).attr('id')).show();
+        });
+
+        $('.dropdown li a').on('click', function () {
+            $(".menulink").click(function () {
+                $(".sidebar").slideToggle(500);
+            });
+        });
     </script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/custom-datetime-validate.js"></script>
+    @RenderSection("scripts", required: false)
+
 </body>
 </html>

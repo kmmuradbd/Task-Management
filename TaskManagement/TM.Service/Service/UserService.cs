@@ -28,20 +28,27 @@ namespace TM.Service.Service
             try
             {
                 TMIdentity identity = (TMIdentity)Thread.CurrentPrincipal.Identity;
-                bool isExistsUser = RepoUser.GetAll(a => a.Id.ToLower().Trim() == user.Id.ToLower().Trim()).Any();
+               // bool isExistsUser = RepoUser.GetAll(a => a.Id.ToLower().Trim() == user.Id.ToLower().Trim()).Any();
                 user.Password = Common.HashCode(user.Password);
-                if (!isExistsUser)
-                {
+                //if (!isExistsUser)
+               // {
                     user.CreatedDate = DateTime.Now;
                     user.CreatedBy = identity.Name;
                     user.IsActive = true;
                     RepoUser.Add(user.ToEntity());
-                }
+                //}
             }
             catch (Exception ex)
             {
 
-                throw new Exception(" Error Exception " + ex);
+                if (ex.InnerException.InnerException.Message.Contains("PK_Users"))
+                {
+                    throw new Exception("This Name(" + user.Id + ") is already exists");
+                }
+                else
+                {
+                    throw new Exception(ex.Message);
+                }
             }
         }
 
@@ -118,7 +125,7 @@ namespace TM.Service.Service
                           UserRoleMasterId = user.UserRoleMasterId,
                           RoleName = RepoUserRoleMaster.Get(r => r.Id == user.UserRoleMasterId).Name,
                           IsArchived = user.IsArchived
-                      }).ToList();
+                      }).OrderByDescending(o=>o.CreatedDate).ToList();
             return us;
         }
 

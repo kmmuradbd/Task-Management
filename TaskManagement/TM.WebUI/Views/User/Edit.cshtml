@@ -1,0 +1,69 @@
+﻿@model TM.Service.ViewModel.UserViewModel
+@using UIHtmlHelper;
+@{
+    ViewBag.Title = "User Edit";
+}
+@using (Ajax.BeginForm("Edit", "User", new AjaxOptions { HttpMethod = "POST" }, new { @class = "form-horizontal" }))
+{
+    <section class="innerSection clearfix">
+        <a class="btn btn-primary btn-back" href="/User">back</a>
+        <h3>Edit User</h3>
+        <div class="row">
+            <div class="col-sm-6 col-md-6">
+                @Html.HiddenFor(model => model.Id)
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.Id)<sup class="orange">*</sup>
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.TextBoxFor(model => model.Id, new { disabled = "disabled" })
+                        @Html.ValidationMessageFor(model => model.Id)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.FullName)<sup class="orange">*</sup>
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.TextBoxFor(model => model.FullName)
+                        @Html.ValidationMessageFor(model => model.FullName)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.Password)<sup class="orange">*</sup>
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.TextBoxFor(model => model.Password, new { @type = "password" })
+                        @Html.ValidationMessageFor(model => model.Password)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.RoleName)<sup class="orange">*</sup>
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.SimpleDropDownFor(model => model.UserRoleMasterId, "/User/GetUserRoleMasterList")
+                        @Html.ValidationMessageFor(model => model.UserRoleMasterId)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.IsActive)
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(model => model.IsActive)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="submit" class="btn btn-default btn-primary">save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

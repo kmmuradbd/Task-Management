@@ -120,3 +120,4 @@ D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\System.Threading.C
 D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\System.Threading.Tasks.Extensions.xml
 D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\EntityFramework.SqlServer.dll
 D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\EntityFramework.SqlServer.xml
+D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\UIHtmlHelper.dll
