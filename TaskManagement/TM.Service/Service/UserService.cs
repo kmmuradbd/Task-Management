@@ -169,6 +169,11 @@ namespace TM.Service.Service
             return from r in RepoUserRoleMaster.GetAll()
                    select new { Text = r.Name, Value = r.Id };
         }
+        public IEnumerable<object> GetUserList(int roleId)
+        {
+            return from r in RepoUser.GetAll(r=> r.UserRoleMasterId==roleId)
+                   select new { Text = r.FullName, Value = r.Id };
+        }
 
     }
 }

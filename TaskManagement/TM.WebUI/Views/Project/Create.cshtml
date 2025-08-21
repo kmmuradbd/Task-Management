@@ -1,0 +1,79 @@
+﻿@model TM.Service.ViewModel.ProjectViewModel
+@using UIHtmlHelper;
+@{
+    ViewBag.Title = "Project Create";
+}
+@using (Ajax.BeginForm("Create", "Project", new AjaxOptions { HttpMethod = "POST" }, new { @class = "form-horizontal" }))
+{
+    <section class="innerSection clearfix">
+        <a class="btn btn-primary btn-back" href="/Project">back</a>
+        <h3>Create Project</h3>
+        <div class="row">
+            <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.Name)<sup class="orange">*</sup>
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.TextBoxFor(model => model.Name)
+                        @Html.ValidationMessageFor(model => model.Name)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.StartDate)<sup class="orange">*</sup>
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.DatePickerFor(model => model.StartDate)
+                        @Html.ValidationMessageFor(model => model.StartDate)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.EndDate)<sup class="orange">*</sup>
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.DatePickerFor(model => model.EndDate)
+                        @Html.ValidationMessageFor(model => model.EndDate)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.ManagerName)<sup class="orange">*</sup>
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.SimpleDropDownFor(model => model.ManagerId, "/User/GetUserList?roleId=2")
+                        @Html.ValidationMessageFor(model => model.ManagerId)
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.Remarks)<sup class="orange">*</sup>
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.TextBoxFor(model => model.Remarks)
+                        @Html.ValidationMessageFor(model => model.Remarks)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.IsActive)
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(model => model.IsActive)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="submit" class="btn btn-default btn-primary">save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+

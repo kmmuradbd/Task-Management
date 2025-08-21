@@ -9,20 +9,20 @@ using TM.Service.ViewModel;
 
 namespace TM.WebUI.Controllers
 {
-    public class UserController : Controller
+    public class ProjectController : Controller
     {
-        protected readonly IUserService AppUser;
-        public UserController(IUserService userService)
+        protected readonly IProjectService AppProject;
+        public ProjectController(IProjectService project)
         {
-            this.AppUser = userService;
+            this.AppProject = project;
         }
-        // GET: User
+        // GET: Project
         public ActionResult Index()
         {
             try
             {
-                IEnumerable<UserViewModel> users = AppUser.GetAll();
-                return View(users);
+                IEnumerable<ProjectViewModel> projects = AppProject.GetAll();
+                return View(projects);
             }
             catch (Exception)
             {
@@ -30,17 +30,12 @@ namespace TM.WebUI.Controllers
                 throw;
             }
         }
+
         #region ddl
-        public JsonResult GetUserRoleMasterList()
+        public JsonResult GetProjectList()
         {
-            return Json(new SelectList(AppUser.GetUserRoleMasterList(), "Value", "Text"), JsonRequestBehavior.AllowGet);
+            return Json(new SelectList(AppProject.GetProjectList(), "Value", "Text"), JsonRequestBehavior.AllowGet);
         }
-        public JsonResult GetUserList(int roleId)
-        {
-            return Json(new SelectList(AppUser.GetUserList(roleId), "Value", "Text"), JsonRequestBehavior.AllowGet);
-        }
-
-
         #endregion
 
         #region Create
@@ -51,11 +46,11 @@ namespace TM.WebUI.Controllers
         }
 
         [HttpPost]
-        public JavaScriptResult Create(UserViewModel user)
+        public JavaScriptResult Create(ProjectViewModel project)
         {
             try
             {
-                AppUser.Add(user);
+                AppProject.Add(project);
                 var logPath = System.Web.Hosting.HostingEnvironment.MapPath("~/Logs/Login-.txt");
 
                 var log = new LoggerConfiguration()
@@ -66,10 +61,10 @@ namespace TM.WebUI.Controllers
                     )
                     .CreateLogger();
 
-                log.Information("User {User} Created By {UserName} at {Time}", user.Id, Session["userName"].ToString(), DateTime.Now);
+                log.Information("Project {Project} Created By {UserName} at {Time}", project.Id, Session["userName"].ToString(), DateTime.Now);
 
                 return JavaScript(string.Format("UYResult('{0}','{1}','{2}','{3}')",
-                   "Data saved successfully.", "success", "redirect", "/User"));
+                   "Data saved successfully.", "success", "redirect", "/Project"));
             }
             catch (System.Exception ex)
             {
@@ -81,18 +76,18 @@ namespace TM.WebUI.Controllers
 
         #region Update
         [HttpGet]
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int id)
         {
-            var user = AppUser.Get(id);
+            var user = AppProject.Get(id);
             return View(user);
         }
 
         [HttpPost]
-        public JavaScriptResult Edit(UserViewModel user)
+        public JavaScriptResult Edit(ProjectViewModel user)
         {
             try
             {
-                AppUser.Update(user);
+                AppProject.Update(user);
 
                 var logPath = System.Web.Hosting.HostingEnvironment.MapPath("~/Logs/Login-.txt");
 
@@ -104,10 +99,10 @@ namespace TM.WebUI.Controllers
                     )
                     .CreateLogger();
 
-                log.Information("User {User} Updated By {UserName} at {Time}", user.Id, Session["userName"].ToString(), DateTime.Now);
+                log.Information("Project {Project} Updated By {UserName} at {Time}", user.Id, Session["userName"].ToString(), DateTime.Now);
 
                 return JavaScript(string.Format("UYResult('{0}','{1}','{2}','{3}')",
-                   "Data saved successfully.", "success", "redirect", "/User"));
+                   "Data saved successfully.", "success", "redirect", "/Project"));
             }
             catch (System.Exception ex)
             {
@@ -116,6 +111,5 @@ namespace TM.WebUI.Controllers
             }
         }
         #endregion
-
     }
 }

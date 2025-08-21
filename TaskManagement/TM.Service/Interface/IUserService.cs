@@ -18,5 +18,6 @@ namespace TM.Service.Interface
         List<UserRoleViewModel> GetAllUserRoles(int userRoleMasterId);
         string[] GetUserRoles(int userRoleMasterId);
         IEnumerable<object> GetUserRoleMasterList();
+        IEnumerable<object> GetUserList(int roleId);
     }
 }
