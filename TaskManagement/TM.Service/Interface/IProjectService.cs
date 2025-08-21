@@ -13,6 +13,7 @@ namespace TM.Service.Interface
         void Update(ProjectViewModel project);
         ProjectViewModel Get(int id);
         IEnumerable<ProjectViewModel> GetAll();
+        IEnumerable<ProjectViewModel> GetAll(string managerId);
         IEnumerable<object> GetProjectList();
     }
 }

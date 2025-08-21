@@ -1,0 +1,71 @@
+﻿@model TM.Service.ViewModel.MemberTaskViewModel
+@using UIHtmlHelper;
+@{
+    ViewBag.Title = "Task Create";
+}
+@using (Ajax.BeginForm("Create", "MemberTask", new AjaxOptions { HttpMethod = "POST" }, new { @class = "form-horizontal" }))
+{
+    <section class="innerSection clearfix">
+        <a class="btn btn-primary btn-back" href="/MemberTask">back</a>
+        <h3>Create Task</h3>
+        <div class="row">
+            <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.ProjectId)<sup class="orange">*</sup>
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.SimpleDropDownFor(model => model.ProjectId, "/Project/GetProjectList/")
+                        @Html.ValidationMessageFor(model => model.ProjectId)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.Name)<sup class="orange">*</sup>
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.TextBoxFor(model => model.Name)
+                        @Html.ValidationMessageFor(model => model.Name)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.MemberName)<sup class="orange">*</sup>
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.SimpleDropDownFor(model => model.MemberId, "/User/GetUserList?roleId=3")
+                        @Html.ValidationMessageFor(model => model.MemberId)
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.Remarks)<sup class="orange">*</sup>
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.TextBoxFor(model => model.Remarks)
+                        @Html.ValidationMessageFor(model => model.Remarks)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(model => model.IsActive)
+                    </div>
+                    <div class="col-sm-9">
+                        @Html.EditorFor(model => model.IsActive)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="submit" class="btn btn-default btn-primary">save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+

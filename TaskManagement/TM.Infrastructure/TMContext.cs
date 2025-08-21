@@ -27,6 +27,7 @@ namespace TM.Infrastructure
         public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<MasterMenu> MasterMenus { get; set; }
         public DbSet<Project> Projects { get; set; }
+        public DbSet<MemberTask> MemberTasks { get; set; }
 
         #endregion
 

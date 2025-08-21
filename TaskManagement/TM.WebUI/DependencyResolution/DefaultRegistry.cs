@@ -41,6 +41,8 @@ namespace TM.WebUI.DependencyResolution {
             For<IUserRoleMasterRepository>().Use<UserRoleMasterRepository>();
             For<IProjectRepository>().Use<ProjectRepository>();
             For<IProjectService>().Use<ProjectService>();
+            For<IMemberTaskRepository>().Use<MemberTaskRepository>();
+            For<IMemberTaskService>().Use<MemberTaskService>();
         }
 
         #endregion

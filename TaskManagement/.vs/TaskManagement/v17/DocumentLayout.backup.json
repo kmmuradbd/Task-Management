@@ -3,60 +3,44 @@
   "WorkspaceRootPath": "D:\\GitHub Project\\Task-Management\\TaskManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\views\\project\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\views\\project\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|d:\\github project\\task-management\\taskmanagement\\tm.service\\service\\membertaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|solutionrelative:tm.service\\service\\membertaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\views\\project\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\views\\project\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\views\\membertask\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\views\\membertask\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\controllers\\membertaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\controllers\\membertaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\views\\membertask\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\views\\membertask\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|d:\\github project\\task-management\\taskmanagement\\tm.service\\viewmodel\\membertaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|solutionrelative:tm.service\\viewmodel\\membertaskviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{562A2FB4-2F9D-4E39-8C82-4E35608DB58D}|TM.Domain\\TM.Domain.csproj|d:\\github project\\task-management\\taskmanagement\\tm.domain\\domainobject\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{562A2FB4-2F9D-4E39-8C82-4E35608DB58D}|TM.Domain\\TM.Domain.csproj|solutionrelative:tm.domain\\domainobject\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|d:\\github project\\task-management\\taskmanagement\\tm.service\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|solutionrelative:tm.service\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|d:\\github project\\task-management\\taskmanagement\\tm.service\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|solutionrelative:tm.service\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\views\\project\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\views\\project\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|d:\\github project\\task-management\\taskmanagement\\tm.service\\service\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|solutionrelative:tm.service\\service\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|d:\\github project\\task-management\\taskmanagement\\tm.service\\interface\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|solutionrelative:tm.service\\interface\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|d:\\github project\\task-management\\taskmanagement\\tm.service\\viewmodel\\projectviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|solutionrelative:tm.service\\viewmodel\\projectviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7FFFFEE-9F83-4E9D-B44A-18A96FEBB718}|TM.Infrastructure\\TM.Infrastructure.csproj|d:\\github project\\task-management\\taskmanagement\\tm.infrastructure\\repository\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7FFFFEE-9F83-4E9D-B44A-18A96FEBB718}|TM.Infrastructure\\TM.Infrastructure.csproj|solutionrelative:tm.infrastructure\\repository\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7FFFFEE-9F83-4E9D-B44A-18A96FEBB718}|TM.Infrastructure\\TM.Infrastructure.csproj|d:\\github project\\task-management\\taskmanagement\\tm.infrastructure\\tmcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7FFFFEE-9F83-4E9D-B44A-18A96FEBB718}|TM.Infrastructure\\TM.Infrastructure.csproj|solutionrelative:tm.infrastructure\\tmcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|d:\\github project\\task-management\\taskmanagement\\tm.service\\interface\\imembertaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|solutionrelative:tm.service\\interface\\imembertaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{562A2FB4-2F9D-4E39-8C82-4E35608DB58D}|TM.Domain\\TM.Domain.csproj|d:\\github project\\task-management\\taskmanagement\\tm.domain\\repositorycontract\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{562A2FB4-2F9D-4E39-8C82-4E35608DB58D}|TM.Domain\\TM.Domain.csproj|solutionrelative:tm.domain\\repositorycontract\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{562A2FB4-2F9D-4E39-8C82-4E35608DB58D}|TM.Domain\\TM.Domain.csproj|d:\\github project\\task-management\\taskmanagement\\tm.domain\\repositorycontract\\imembertaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{562A2FB4-2F9D-4E39-8C82-4E35608DB58D}|TM.Domain\\TM.Domain.csproj|solutionrelative:tm.domain\\repositorycontract\\imembertaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,184 +62,132 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Views\\Project\\Edit.cshtml",
-              "RelativeDocumentMoniker": "TM.WebUI\\Views\\Project\\Edit.cshtml",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Views\\Project\\Edit.cshtml",
-              "RelativeToolTip": "TM.WebUI\\Views\\Project\\Edit.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Views\\MemberTask\\Edit.cshtml",
+              "RelativeDocumentMoniker": "TM.WebUI\\Views\\MemberTask\\Edit.cshtml",
+              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Views\\MemberTask\\Edit.cshtml",
+              "RelativeToolTip": "TM.WebUI\\Views\\MemberTask\\Edit.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-21T08:06:08.502Z",
+              "WhenOpened": "2025-08-21T11:02:37.634Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\Interface\\IUserService.cs",
-              "RelativeDocumentMoniker": "TM.Service\\Interface\\IUserService.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\Interface\\IUserService.cs",
-              "RelativeToolTip": "TM.Service\\Interface\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA0AAAAAAAAAA==",
+              "Title": "MemberTaskViewModel.cs",
+              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\ViewModel\\MemberTaskViewModel.cs",
+              "RelativeDocumentMoniker": "TM.Service\\ViewModel\\MemberTaskViewModel.cs",
+              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\ViewModel\\MemberTaskViewModel.cs",
+              "RelativeToolTip": "TM.Service\\ViewModel\\MemberTaskViewModel.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAArwDUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T08:00:46.6Z",
+              "WhenOpened": "2025-08-21T10:47:44.077Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\Service\\UserService.cs",
-              "RelativeDocumentMoniker": "TM.Service\\Service\\UserService.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\Service\\UserService.cs",
-              "RelativeToolTip": "TM.Service\\Service\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T07:59:48.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Views\\Project\\Create.cshtml",
-              "RelativeDocumentMoniker": "TM.WebUI\\Views\\Project\\Create.cshtml",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Views\\Project\\Create.cshtml",
-              "RelativeToolTip": "TM.WebUI\\Views\\Project\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-21T07:57:13.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Views\\Project\\Index.cshtml",
-              "RelativeDocumentMoniker": "TM.WebUI\\Views\\Project\\Index.cshtml",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Views\\Project\\Index.cshtml",
-              "RelativeToolTip": "TM.WebUI\\Views\\Project\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-21T07:50:50.898Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "TM.WebUI\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Controllers\\UserController.cs",
-              "RelativeToolTip": "TM.WebUI\\Controllers\\UserController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowCUAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T07:50:19.846Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "ProjectController.cs",
               "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Controllers\\ProjectController.cs",
               "RelativeDocumentMoniker": "TM.WebUI\\Controllers\\ProjectController.cs",
               "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Controllers\\ProjectController.cs",
               "RelativeToolTip": "TM.WebUI\\Controllers\\ProjectController.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAYwFUAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowEoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T07:49:27.511Z",
+              "WhenOpened": "2025-08-21T10:39:52.625Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ProjectService.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\Service\\ProjectService.cs",
-              "RelativeDocumentMoniker": "TM.Service\\Service\\ProjectService.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\Service\\ProjectService.cs",
-              "RelativeToolTip": "TM.Service\\Service\\ProjectService.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowC0AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T07:44:03.278Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IProjectService.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\Interface\\IProjectService.cs",
-              "RelativeDocumentMoniker": "TM.Service\\Interface\\IProjectService.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\Interface\\IProjectService.cs",
-              "RelativeToolTip": "TM.Service\\Interface\\IProjectService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T07:43:05.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ProjectViewModel.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\ViewModel\\ProjectViewModel.cs",
-              "RelativeDocumentMoniker": "TM.Service\\ViewModel\\ProjectViewModel.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\ViewModel\\ProjectViewModel.cs",
-              "RelativeToolTip": "TM.Service\\ViewModel\\ProjectViewModel.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAA0wCoAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T07:39:24.423Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ProjectRepository.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Infrastructure\\Repository\\ProjectRepository.cs",
-              "RelativeDocumentMoniker": "TM.Infrastructure\\Repository\\ProjectRepository.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Infrastructure\\Repository\\ProjectRepository.cs",
-              "RelativeToolTip": "TM.Infrastructure\\Repository\\ProjectRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T07:38:57.917Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TMContext.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Infrastructure\\TMContext.cs",
-              "RelativeDocumentMoniker": "TM.Infrastructure\\TMContext.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Infrastructure\\TMContext.cs",
-              "RelativeToolTip": "TM.Infrastructure\\TMContext.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA1wBwAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T07:38:34.546Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IProjectRepository.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Domain\\RepositoryContract\\IProjectRepository.cs",
-              "RelativeDocumentMoniker": "TM.Domain\\RepositoryContract\\IProjectRepository.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Domain\\RepositoryContract\\IProjectRepository.cs",
-              "RelativeToolTip": "TM.Domain\\RepositoryContract\\IProjectRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T07:38:12.634Z",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Views\\MemberTask\\Index.cshtml",
+              "RelativeDocumentMoniker": "TM.WebUI\\Views\\MemberTask\\Index.cshtml",
+              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Views\\MemberTask\\Index.cshtml",
+              "RelativeToolTip": "TM.WebUI\\Views\\MemberTask\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-21T10:27:06.848Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Project.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Domain\\DomainObject\\Project.cs",
-              "RelativeDocumentMoniker": "TM.Domain\\DomainObject\\Project.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Domain\\DomainObject\\Project.cs",
-              "RelativeToolTip": "TM.Domain\\DomainObject\\Project.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
+              "Title": "MemberTaskController.cs",
+              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Controllers\\MemberTaskController.cs",
+              "RelativeDocumentMoniker": "TM.WebUI\\Controllers\\MemberTaskController.cs",
+              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Controllers\\MemberTaskController.cs",
+              "RelativeToolTip": "TM.WebUI\\Controllers\\MemberTaskController.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAQwE0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T07:37:06.849Z",
+              "WhenOpened": "2025-08-21T09:59:54.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IProjectRepository.cs",
+              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Domain\\RepositoryContract\\IProjectRepository.cs",
+              "RelativeDocumentMoniker": "TM.Domain\\RepositoryContract\\IProjectRepository.cs",
+              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Domain\\RepositoryContract\\IProjectRepository.cs",
+              "RelativeToolTip": "TM.Domain\\RepositoryContract\\IProjectRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T09:43:20.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MemberTaskService.cs",
+              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\Service\\MemberTaskService.cs",
+              "RelativeDocumentMoniker": "TM.Service\\Service\\MemberTaskService.cs",
+              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\Service\\MemberTaskService.cs",
+              "RelativeToolTip": "TM.Service\\Service\\MemberTaskService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowFAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T09:36:19.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TM.WebUI\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TM.WebUI\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-21T11:03:52.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IMemberTaskService.cs",
+              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\Interface\\IMemberTaskService.cs",
+              "RelativeDocumentMoniker": "TM.Service\\Interface\\IMemberTaskService.cs",
+              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\Interface\\IMemberTaskService.cs",
+              "RelativeToolTip": "TM.Service\\Interface\\IMemberTaskService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T09:35:24.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IMemberTaskRepository.cs",
+              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Domain\\RepositoryContract\\IMemberTaskRepository.cs",
+              "RelativeDocumentMoniker": "TM.Domain\\RepositoryContract\\IMemberTaskRepository.cs",
+              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Domain\\RepositoryContract\\IMemberTaskRepository.cs",
+              "RelativeToolTip": "TM.Domain\\RepositoryContract\\IMemberTaskRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T09:27:52.85Z",
               "EditorCaption": ""
             }
           ]

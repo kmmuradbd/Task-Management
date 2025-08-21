@@ -94,7 +94,31 @@ namespace TM.Service.Service
 
         public IEnumerable<ProjectViewModel> GetAll()
         {
-            var projectList = (from project in RepoProject.GetAll(r => !r.IsArchived)
+            TMIdentity identity = (TMIdentity)Thread.CurrentPrincipal.Identity;
+            var projectList = (from project in RepoProject.GetAll(r => identity.IsSysAdmin || (r.ManagerId==identity.Id) && !r.IsArchived)
+                               orderby project.Name
+                               select new ProjectViewModel()
+                               {
+                                   Id = project.Id,
+                                   IsActive = project.IsActive,
+                                   Name = project.Name,
+                                   StartDate = project.StartDate,
+                                   EndDate = project.EndDate,
+                                   ManagerId = project.ManagerId,
+                                   ManagerName = RepoUser.Get(r => r.Id == project.ManagerId).FullName,
+                                   Remarks = project.Remarks,
+                                   IsArchived = project.IsArchived,
+                                   CreatedBy = project.CreatedBy,
+                                   CreatedDate = project.CreatedDate,
+                                   UpdatedBy = project.UpdatedBy,
+                                   UpdatedDate = project.UpdatedDate
+                               }).ToList();
+            return projectList;
+        }
+        public IEnumerable<ProjectViewModel> GetAll(string managerId)
+        {
+            TMIdentity identity = (TMIdentity)Thread.CurrentPrincipal.Identity;
+            var projectList = (from project in RepoProject.GetAll(r => (identity.IsSysAdmin) ||  (r.ManagerId==managerId && !r.IsArchived))
                                orderby project.Name
                                select new ProjectViewModel()
                                {
@@ -117,7 +141,8 @@ namespace TM.Service.Service
 
         public IEnumerable<object> GetProjectList()
         {
-            return from r in RepoProject.GetAll()
+            TMIdentity identity = (TMIdentity)Thread.CurrentPrincipal.Identity;
+            return from r in RepoProject.GetAll(r=>(identity.IsSysAdmin) || (r.ManagerId == identity.Id && !r.IsArchived))
                    select new { Text = r.Name, Value = r.Id };
         }
 

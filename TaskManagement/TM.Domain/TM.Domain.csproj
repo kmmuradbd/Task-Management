@@ -44,12 +44,14 @@
   <ItemGroup>
     <Compile Include="DomainObject\MasterMenu.cs" />
     <Compile Include="DomainObject\Project.cs" />
+    <Compile Include="DomainObject\MemberTask.cs" />
     <Compile Include="DomainObject\User.cs" />
     <Compile Include="DomainObject\UserRole.cs" />
     <Compile Include="DomainObject\UserRoleMaster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryContract\IMasterMenuRepository.cs" />
     <Compile Include="RepositoryContract\IProjectRepository.cs" />
+    <Compile Include="RepositoryContract\IMemberTaskRepository.cs" />
     <Compile Include="RepositoryContract\IUserRepository.cs" />
     <Compile Include="RepositoryContract\IUserRoleMasterRepository.cs" />
     <Compile Include="RepositoryContract\IUserRoleRepository.cs" />

@@ -35,13 +35,15 @@ namespace TM.WebUI.Controllers
            
             if (AppUser.Login(username, password))
             {
-
+                bool isSysAdmin = false;
                 var userInfo = AppUser.Get(username);
+                if (userInfo.UserRoleMasterId == 1) isSysAdmin = true;
                 string[] roles = AppUser.GetUserRoles(userInfo.UserRoleMasterId);
                 var wsIP = Common.GetWorkstationIP();
                 string basicTicket = TMIdentity.CreateBasicTicket(
                                                                     username,
-                                                                    userInfo.FullName
+                                                                    userInfo.FullName,
+                                                                    isSysAdmin
                                                                  );
                 string roleTicket = TMIdentity.CreateRoleTicket(roles);
                 int timeOut = Convert.ToInt32(new AppSettingsReader().GetValue("COOKIE_TIMEOUT", typeof(string)));
