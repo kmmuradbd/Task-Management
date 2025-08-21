@@ -1,0 +1,16 @@
+D:\GitHub Project\Task-Management\TaskManagement\TM.Infrastructure\bin\Debug\TM.Infrastructure.dll.config
+D:\GitHub Project\Task-Management\TaskManagement\TM.Infrastructure\bin\Debug\TM.Infrastructure.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.Infrastructure\bin\Debug\TM.Infrastructure.pdb
+D:\GitHub Project\Task-Management\TaskManagement\TM.Infrastructure\bin\Debug\EntityFramework.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.Infrastructure\bin\Debug\TM.Core.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.Infrastructure\bin\Debug\TM.Domain.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.Infrastructure\bin\Debug\TM.Core.pdb
+D:\GitHub Project\Task-Management\TaskManagement\TM.Infrastructure\bin\Debug\TM.Domain.pdb
+D:\GitHub Project\Task-Management\TaskManagement\TM.Infrastructure\bin\Debug\EntityFramework.xml
+D:\GitHub Project\Task-Management\TaskManagement\TM.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub Project\Task-Management\TaskManagement\TM.Infrastructure\obj\Debug\TM.Infrastructure.csproj.AssemblyReference.cache
+D:\GitHub Project\Task-Management\TaskManagement\TM.Infrastructure\obj\Debug\TM.Infrastructure.csproj.CoreCompileInputs.cache
+D:\GitHub Project\Task-Management\TaskManagement\TM.Infrastructure\obj\Debug\TM.Infra.FB4E4186.Up2Date
+D:\GitHub Project\Task-Management\TaskManagement\TM.Infrastructure\obj\Debug\TM.Infrastructure.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.Infrastructure\obj\Debug\TM.Infrastructure.pdb

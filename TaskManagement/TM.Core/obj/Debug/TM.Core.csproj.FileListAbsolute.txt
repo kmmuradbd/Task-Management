@@ -1,0 +1,6 @@
+D:\GitHub Project\Task-Management\TaskManagement\TM.Core\bin\Debug\TM.Core.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.Core\bin\Debug\TM.Core.pdb
+D:\GitHub Project\Task-Management\TaskManagement\TM.Core\obj\Debug\TM.Core.csproj.AssemblyReference.cache
+D:\GitHub Project\Task-Management\TaskManagement\TM.Core\obj\Debug\TM.Core.csproj.CoreCompileInputs.cache
+D:\GitHub Project\Task-Management\TaskManagement\TM.Core\obj\Debug\TM.Core.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.Core\obj\Debug\TM.Core.pdb

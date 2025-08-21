@@ -1,0 +1,9 @@
+D:\GitHub Project\Task-Management\TaskManagement\TM.Domain\bin\Debug\TM.Domain.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.Domain\bin\Debug\TM.Domain.pdb
+D:\GitHub Project\Task-Management\TaskManagement\TM.Domain\bin\Debug\TM.Core.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.Domain\bin\Debug\TM.Core.pdb
+D:\GitHub Project\Task-Management\TaskManagement\TM.Domain\obj\Debug\TM.Domain.csproj.AssemblyReference.cache
+D:\GitHub Project\Task-Management\TaskManagement\TM.Domain\obj\Debug\TM.Domain.csproj.CoreCompileInputs.cache
+D:\GitHub Project\Task-Management\TaskManagement\TM.Domain\obj\Debug\TM.Domain.csproj.Up2Date
+D:\GitHub Project\Task-Management\TaskManagement\TM.Domain\obj\Debug\TM.Domain.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.Domain\obj\Debug\TM.Domain.pdb
