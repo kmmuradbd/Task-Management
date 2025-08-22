@@ -29,7 +29,9 @@ namespace TM.WebUI.Controllers
         {
             var data = AppMasterMenu.GetAll(Session["userName"].ToString());
             Session["menu"] = data;
-            return View();
+            // Get currently online users
+            var onlineUsers = MvcApplication.GetOnlineUsers();
+            return View(onlineUsers);
         }
 
         public JsonResult GetNotificationContacts()

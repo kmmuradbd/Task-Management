@@ -3,48 +3,16 @@
   "WorkspaceRootPath": "D:\\GitHub Project\\Task-Management\\TaskManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|d:\\github project\\task-management\\taskmanagement\\tm.service\\service\\membertaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|solutionrelative:tm.service\\service\\membertaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\scripts\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\scripts\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\signalr\\notificationcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\signalr\\notificationcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\signalr\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\signalr\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|d:\\github project\\task-management\\taskmanagement\\tm.webui\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{3DE7EB81-545D-4B42-993C-6BA4C388D55D}|TM.WebUI\\TM.WebUI.csproj|solutionrelative:tm.webui\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|d:\\github project\\task-management\\taskmanagement\\tm.service\\interface\\imembertaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDC6EF71-F3C4-4AE8-8967-4FA21A2FD3CC}|TM.Service\\TM.Service.csproj|solutionrelative:tm.service\\interface\\imembertaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,80 +34,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BundleConfig.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\App_Start\\BundleConfig.cs",
-              "RelativeDocumentMoniker": "TM.WebUI\\App_Start\\BundleConfig.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\App_Start\\BundleConfig.cs",
-              "RelativeToolTip": "TM.WebUI\\App_Start\\BundleConfig.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T03:02:04.651Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Global.asax.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Global.asax.cs",
-              "RelativeDocumentMoniker": "TM.WebUI\\Global.asax.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Global.asax.cs",
-              "RelativeToolTip": "TM.WebUI\\Global.asax.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAA1wCUAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T02:44:43.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "TM.WebUI\\Controllers\\LoginController.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "TM.WebUI\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAkwEkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T02:37:48.566Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "main.js",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Scripts\\main.js",
-              "RelativeDocumentMoniker": "TM.WebUI\\Scripts\\main.js",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Scripts\\main.js",
-              "RelativeToolTip": "TM.WebUI\\Scripts\\main.js",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDIAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-08-22T00:48:55.054Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IMemberTaskService.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\Interface\\IMemberTaskService.cs",
-              "RelativeDocumentMoniker": "TM.Service\\Interface\\IMemberTaskService.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\Interface\\IMemberTaskService.cs",
-              "RelativeToolTip": "TM.Service\\Interface\\IMemberTaskService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T00:34:46.053Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MemberTaskService.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\Service\\MemberTaskService.cs",
-              "RelativeDocumentMoniker": "TM.Service\\Service\\MemberTaskService.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.Service\\Service\\MemberTaskService.cs",
-              "RelativeToolTip": "TM.Service\\Service\\MemberTaskService.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAIwJcAAABqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T00:33:05.97Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "TM.WebUI\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "TM.WebUI\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAH0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-22T04:47:52.672Z",
               "EditorCaption": ""
             },
             {
@@ -150,61 +53,22 @@
               "RelativeDocumentMoniker": "TM.WebUI\\Controllers\\HomeController.cs",
               "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Controllers\\HomeController.cs",
               "RelativeToolTip": "TM.WebUI\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAQwCYAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACEAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T00:31:50.758Z",
+              "WhenOpened": "2025-08-22T04:47:22.266Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Startup.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Startup.cs",
-              "RelativeDocumentMoniker": "TM.WebUI\\Startup.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Startup.cs",
-              "RelativeToolTip": "TM.WebUI\\Startup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Global.asax.cs",
+              "RelativeDocumentMoniker": "TM.WebUI\\Global.asax.cs",
+              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Global.asax.cs",
+              "RelativeToolTip": "TM.WebUI\\Global.asax.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAowEUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T00:30:58.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "NotificationHub.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\SignalR\\NotificationHub.cs",
-              "RelativeDocumentMoniker": "TM.WebUI\\SignalR\\NotificationHub.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\SignalR\\NotificationHub.cs",
-              "RelativeToolTip": "TM.WebUI\\SignalR\\NotificationHub.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T00:29:12.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "NotificationComponent.cs",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\SignalR\\NotificationComponent.cs",
-              "RelativeDocumentMoniker": "TM.WebUI\\SignalR\\NotificationComponent.cs",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\SignalR\\NotificationComponent.cs",
-              "RelativeToolTip": "TM.WebUI\\SignalR\\NotificationComponent.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBoAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-22T00:23:59.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Web.config",
-              "DocumentMoniker": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Web.config",
-              "RelativeDocumentMoniker": "TM.WebUI\\Web.config",
-              "ToolTip": "D:\\GitHub Project\\Task-Management\\TaskManagement\\TM.WebUI\\Web.config",
-              "RelativeToolTip": "TM.WebUI\\Web.config",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAEoAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-08-22T00:22:29.647Z",
+              "WhenOpened": "2025-08-22T04:46:01.442Z",
               "EditorCaption": ""
             }
           ]

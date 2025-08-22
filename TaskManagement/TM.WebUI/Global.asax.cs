@@ -28,6 +28,47 @@ namespace TM.WebUI
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             // Start Sql Dependency
             SqlDependency.Start(con);
+            // Initialize LoggedInUsers cache
+            if (HttpRuntime.Cache["LoggedInUsers"] == null)
+            {
+                HttpRuntime.Cache["LoggedInUsers"] = new Dictionary<string, DateTime>();
+            }
+        }
+        protected void Application_EndRequest()
+        {
+            var loggedInUsers = (Dictionary<string, DateTime>)HttpRuntime.Cache["LoggedInUsers"];
+
+            if (User != null && User.Identity.IsAuthenticated)
+            {
+                var userName = User.Identity.Name;
+                if (loggedInUsers != null)
+                {
+                    loggedInUsers[userName] = DateTime.Now;
+                    HttpRuntime.Cache["LoggedInUsers"] = loggedInUsers;
+                }
+            }
+
+            if (loggedInUsers != null)
+            {
+                foreach (var item in loggedInUsers.ToList())
+                {
+                    if (item.Value < DateTime.Now.AddMinutes(-10)) // 10 mins inactive
+                    {
+                        loggedInUsers.Remove(item.Key);
+                    }
+                }
+                HttpRuntime.Cache["LoggedInUsers"] = loggedInUsers;
+            }
+        }
+        // Helper to get online users
+        public static List<string> GetOnlineUsers()
+        {
+            var loggedInUsers = (Dictionary<string, DateTime>)HttpRuntime.Cache["LoggedInUsers"];
+            if (loggedInUsers != null)
+            {
+                return loggedInUsers.Keys.ToList();
+            }
+            return new List<string>();
         }
         protected void Session_Start(object sender, EventArgs e)
         {

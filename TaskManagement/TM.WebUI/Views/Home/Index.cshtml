@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<string>
+@{
     ViewBag.Title = "Home";
 }
 <section class="userHistory clearfix">
@@ -9,8 +10,8 @@
 
                     <a href="#">
                         <i class="fa fa-area-chart"></i>
-                        <span style="font-size:22px;">5345345</span>
-                        <span>Total Amount</span>
+                        <span style="font-size:22px;">120</span>
+                        <span>Total Project</span>
                     </a>
                 </h3>
 
@@ -20,9 +21,9 @@
             <div class="erp-module">
                 <h3>
                     <a href="#">
-                        <i class="fa fa-users"></i>
-                        <span style="font-size:22px;">3435345</span>
-                        <span>Members Received</span>
+                        <i class="fa fa-pie-chart"></i>
+                        <span style="font-size:22px;">20000</span>
+                        <span>Total Task</span>
                     </a>
                 </h3>
             </div>
@@ -33,8 +34,8 @@
                 <h3>
                     <a href="#">
                         <i class="fa fa-money"></i>
-                        <span style="font-size:22px;">2342342</span>
-                        <span>Members Due</span>
+                        <span style="font-size:22px;">1500</span>
+                        <span>Complte Task</span>
                     </a>
                 </h3>
             </div>
@@ -43,31 +44,33 @@
             <div class="erp-module">
                 <h3>
                     <a href="#">
-                        <i class="fa fa-pie-chart"></i>
-                        <span style="font-size:22px;">2342342</span>
-                        <span>Others Receives</span>
-                    </a>
-                </h3>
-            </div>
-        </div>
-        <div class="col-md-2 col-sm-4 col-xs-6 text-center">
-            <div class="erp-module">
-                <h3>
-                    <a href="#">
-                        <i class="fa fa-user"></i>
-                        <span style="font-size:22px;">2342342</span>
-                        <span>Profits</span>
-                    </a>
-                </h3>
-            </div>
-        </div>
-        <div class="col-md-2 col-sm-4 col-xs-6 text-center">
-            <div class="erp-module">
-                <h3>
-                    <a href="#">
+                        
                         <i class="fa fa-calculator"></i>
-                        <span style="font-size:22px;">242342</span>
-                        <span>Expense</span>
+                        <span style="font-size:22px;">50</span>
+                        <span>Doing Task</span>
+                    </a>
+                </h3>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 text-center">
+            <div class="erp-module">
+                <h3>
+                    <a href="#">
+                        <i class="fa fa-tasks"></i>
+                        <span style="font-size:22px;">500</span>
+                        <span>Pending Task</span>
+                    </a>
+                </h3>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 text-center">
+            <div class="erp-module">
+                <h3>
+                    <a href="#">
+                        
+                        <i class="fa fa-users"></i>
+                        <span style="font-size:22px;">20</span>
+                        <span>Total Member</span>
                     </a>
                 </h3>
             </div>
@@ -78,55 +81,29 @@
 
 
 <section class="innerSection clearfix padding-top-none">
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
-    <style>
-        #barchart {
-            width: 100%; /* Full width of the parent container */
-            max-width: 900px; /* Optional maximum width */
-            height: auto; /* Allow height to adjust dynamically */
-            min-height: 400px; /* Ensure minimum height for readability */
-        }
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
-        .chart-border {
-            width: 100%;
-            height: 300px; /* Adjust as needed */
-            background-color: #f9f9f9; /* Background color */
-            border: 1px solid #ccc; /* Border color */
-            border-right: 1px solid #999; /* 3D effect on right */
-            border-bottom: 1px solid #999; /* 3D effect on bottom */
-            box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), 4px 4px 6px rgba(0, 0, 0, 0.2); /* Additional shadow */
-            border-radius: 4px; /* Optional rounded corners */
-            margin: 1%;
-        }
-    </style>
-   
 
     <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-12 text-center">
-            <div class="erp-module">
-                <div id="barchart" class="chart-border"></div>
+            <div class="erp-module" style="background-color:#E1E3E4; color: #fff;">
+                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
             </div>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12 text-center">
             <div class="erp-module">
-                @*<div id="piechart" style="height: 400px;" class="chart-border"></div>*@
-                <div id="container" style="overflow:scroll; overflow-x: hidden; ">
-                </div>
+
                 <div class="table-responsive">
                     <table id="gvDataList" class="table demo dataTable" data-filter="#filter" data-page-size="20">
                         <thead>
                             <tr>
                                 <th style="text-align:center;padding-top:10px;">
-                                    ID
+                                    User
                                 </th>
                                 <th style="text-align:center;padding-top:10px;">
-                                    Name
+                                    Status
                                 </th>
-                                <th data-sort-ignore="true" style="text-align:center;padding-top:10px;">
-                                    Due
-                                </th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -136,13 +113,10 @@
                                 {
                                     <tr>
                                         <td>
-                                            @Html.Raw(item.Code)
+                                            @Html.Raw(item)
                                         </td>
-                                        <td>
-                                            @Html.Raw(item.NameEnglish)
-                                        </td>
-                                        <td>
-                                            @Html.Raw(item.SavingAmount)
+                                        <td style="color:green; font-weight:900;">
+                                            Online
                                         </td>
 
                                     </tr>
@@ -154,37 +128,34 @@
             </div>
         </div>
     </div>
-    <script>
 
-        $(document).ready(function () {
-            var width = new Array();
-            var table = $("table[id*=gvDataList]"); //Pass your gridview id here.
-            table.find("th").each(function (i) {
-                width[i] = $(this).width();
-            });
-            headerRow = table.find("tr:first");
-            headerRow.find("th").each(function (i) {
-                $(this).width(width[i]);
-            });
-            firstRow = table.find("tr:first").next();
-            firstRow.find("td").each(function (i) {
-                $(this).width(width[i]);
-            });
-            var header = table.clone();
-            header.empty();
-            header.append(headerRow);
-            header.append(firstRow);
-            header.css("width", width);
-            header.css("height", "20px");
-            header.css("color", "#fff");
-            /* header.css("font-size", "larger");*/
-            $("#container").before(header);
-            table.find("tr:first td").each(function (i) {
-                $(this).width(width[i]);
-            });
-            $("#container").height(350);
-            $("#container").width(table.width() + 20);
-            $("#container").append(table);
+
+    <script>
+        const xValues = ["Total", "Complte", "Doing", "Pending"];
+        const yValues = [55, 49, 44, 24];
+        const barColors = [
+            "#b91d47",
+            "#00aba9",
+            "#2b5797",
+            "#e8c3b9"
+           
+        ];
+
+        new Chart("myChart", {
+            type: "pie",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "Task Information"
+                }
+            }
         });
     </script>
 </section>
