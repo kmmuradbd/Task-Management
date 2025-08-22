@@ -12,7 +12,7 @@ using TM.Service.ViewModel;
 
 namespace TM.Service.Service
 {
-    public class MemberTaskService: IMemberTaskService
+    public class MemberTaskService : IMemberTaskService
     {
         protected readonly IMemberTaskRepository RepoMemberTask;
         protected readonly IUserRepository RepoUser;
@@ -54,16 +54,26 @@ namespace TM.Service.Service
             {
                 TMIdentity identity = (TMIdentity)Thread.CurrentPrincipal.Identity;
                 MemberTaskViewModel oldMemberTask = Get(memberTask.Id);
-                oldMemberTask.IsActive = memberTask.IsActive;
-                oldMemberTask.Name = memberTask.Name;
-                oldMemberTask.ProjectId = memberTask.ProjectId;
-                oldMemberTask.MemberId = memberTask.MemberId;
+                oldMemberTask.IsActive = identity.RoleId == 2 ? memberTask.IsActive : oldMemberTask.IsActive;
+                oldMemberTask.Name = identity.RoleId == 2 ? memberTask.Name : oldMemberTask.Name;
+                oldMemberTask.ProjectId = identity.RoleId == 2 ? memberTask.ProjectId : oldMemberTask.ProjectId;
+                oldMemberTask.MemberId = identity.RoleId == 2 ? memberTask.MemberId : oldMemberTask.MemberId;
                 oldMemberTask.Status = memberTask.Status;
-                oldMemberTask.WorkStartDate = memberTask.WorkStartDate==null?null: memberTask.WorkStartDate;
-                oldMemberTask.WorkEndDate = memberTask.WorkEndDate==null?null: memberTask.WorkEndDate;
-                oldMemberTask.Duration = memberTask.Duration;
+                if (memberTask.Status == "Doing")
+                    oldMemberTask.WorkStartDate = DateTime.Now;
+                if (memberTask.Status == "Complte")
+                {
+                    oldMemberTask.WorkEndDate = DateTime.Now;
+                    if (oldMemberTask.WorkStartDate.HasValue && oldMemberTask.WorkEndDate.HasValue)
+                    {
+                        TimeSpan timeSpan = oldMemberTask.WorkEndDate.Value - oldMemberTask.WorkStartDate.Value;
+                        oldMemberTask.Duration = timeSpan;
+                    }
+
+                }
+
                 oldMemberTask.Comments = memberTask.Comments;
-                oldMemberTask.Remarks = memberTask.Remarks;
+                oldMemberTask.Remarks = identity.RoleId == 2 ? memberTask.Remarks : oldMemberTask.Remarks;
                 oldMemberTask.UpdatedBy = identity.Id;
                 oldMemberTask.UpdatedDate = DateTime.Now;
                 RepoMemberTask.Update(oldMemberTask.ToEntity());
@@ -90,7 +100,7 @@ namespace TM.Service.Service
                 IsActive = memberTask.IsActive,
                 Name = memberTask.Name,
                 ProjectId = memberTask.ProjectId,
-                MemberId=memberTask.MemberId,
+                MemberId = memberTask.MemberId,
                 Status = memberTask.Status,
                 AssignDate = memberTask.AssignDate,
                 WorkStartDate = memberTask.WorkStartDate,
@@ -109,30 +119,30 @@ namespace TM.Service.Service
         public IEnumerable<MemberTaskViewModel> GetAll()
         {
             TMIdentity identity = (TMIdentity)Thread.CurrentPrincipal.Identity;
-            var memberTaskList = (from memberTask in RepoMemberTask.GetAll(r => (identity.IsSysAdmin)|| (r.CreatedBy==identity.Id) || (r.MemberId == identity.Id) && !r.IsArchived)
-                               orderby memberTask.Name
-                               select new MemberTaskViewModel()
-                               {
-                                   Id = memberTask.Id,
-                                   IsActive = memberTask.IsActive,
-                                   Name = memberTask.Name,
-                                   ProjectId = memberTask.ProjectId,
-                                   ProjectName= RepoProject.Get(memberTask.ProjectId).Name,
-                                   MemberId = memberTask.MemberId,
-                                   MemberName=RepoUser.Get(r=> r.Id== memberTask.MemberId).FullName,
-                                   Status = memberTask.Status,
-                                   AssignDate = memberTask.AssignDate,
-                                   WorkStartDate = memberTask.WorkStartDate,
-                                   WorkEndDate = memberTask.WorkEndDate,
-                                   Duration = memberTask.Duration,
-                                   Comments = memberTask.Comments,
-                                   Remarks = memberTask.Remarks,
-                                   IsArchived = memberTask.IsArchived,
-                                   CreatedBy = memberTask.CreatedBy,
-                                   CreatedDate = memberTask.CreatedDate,
-                                   UpdatedBy = memberTask.UpdatedBy,
-                                   UpdatedDate = memberTask.UpdatedDate,
-                               }).ToList();
+            var memberTaskList = (from memberTask in RepoMemberTask.GetAll(r => (identity.IsSysAdmin) || (r.CreatedBy == identity.Id) || (r.MemberId == identity.Id) && !r.IsArchived)
+                                  orderby memberTask.Name
+                                  select new MemberTaskViewModel()
+                                  {
+                                      Id = memberTask.Id,
+                                      IsActive = memberTask.IsActive,
+                                      Name = memberTask.Name,
+                                      ProjectId = memberTask.ProjectId,
+                                      ProjectName = RepoProject.Get(memberTask.ProjectId).Name,
+                                      MemberId = memberTask.MemberId,
+                                      MemberName = RepoUser.Get(r => r.Id == memberTask.MemberId).FullName,
+                                      Status = memberTask.Status,
+                                      AssignDate = memberTask.AssignDate,
+                                      WorkStartDate = memberTask.WorkStartDate,
+                                      WorkEndDate = memberTask.WorkEndDate,
+                                      Duration = memberTask.Duration,
+                                      Comments = memberTask.Comments,
+                                      Remarks = memberTask.Remarks,
+                                      IsArchived = memberTask.IsArchived,
+                                      CreatedBy = memberTask.CreatedBy,
+                                      CreatedDate = memberTask.CreatedDate,
+                                      UpdatedBy = memberTask.UpdatedBy,
+                                      UpdatedDate = memberTask.UpdatedDate,
+                                  }).ToList();
             return memberTaskList;
         }
 

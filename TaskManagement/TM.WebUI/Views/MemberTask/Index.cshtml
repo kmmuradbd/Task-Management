@@ -1,7 +1,10 @@
 ﻿@model IEnumerable<TM.Service.ViewModel.MemberTaskViewModel>
+@using TM.Infrastructure;
+@using System.Threading;
 @using UIHtmlHelper;
 @{
     ViewBag.Title = "Task";
+    TMIdentity identity = null;
 }
 <section class="innerSection clearfix">
     <form class="form-inline" role="form" method="get" action="/MemberTask/">
@@ -13,10 +16,24 @@
             <input id="search" name="search" type="text" class="form-control" placeholder="Search For">
         </div>
         <button type="submit" class="btn btn-default btn-primary">Search</button>
-        <a class="btn btn-default btn-primary add-new" href="/MemberTask/Create">
-            <i class="fa fa-plus hidden-xs"></i>add new
-        </a>
-    </form>
+        @{
+            try
+            {
+                identity = (TMIdentity)Thread.CurrentPrincipal.Identity;
+                if (identity != null && identity.RoleId==2)
+                {
+                    <a class="btn btn-default btn-primary add-new" href="/MemberTask/Create">
+                        <i class="fa fa-plus hidden-xs"></i>add new
+                    </a>
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Log the exception or handle it as needed
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        </form>
     <h3>Task information</h3>
     <table class="table demo dataTable" data-filter="#filter" data-page-size="20">
         <thead>

@@ -43,7 +43,8 @@ namespace TM.WebUI.Controllers
                 string basicTicket = TMIdentity.CreateBasicTicket(
                                                                     username,
                                                                     userInfo.FullName,
-                                                                    isSysAdmin
+                                                                    isSysAdmin,
+                                                                    userInfo.UserRoleMasterId
                                                                  );
                 string roleTicket = TMIdentity.CreateRoleTicket(roles);
                 int timeOut = Convert.ToInt32(new AppSettingsReader().GetValue("COOKIE_TIMEOUT", typeof(string)));
