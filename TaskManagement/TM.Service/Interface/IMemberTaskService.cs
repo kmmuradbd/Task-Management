@@ -13,5 +13,6 @@ namespace TM.Service.Interface
         void Update(MemberTaskViewModel memberTask);
         MemberTaskViewModel Get(int id);
         IEnumerable<MemberTaskViewModel> GetAll();
+        IEnumerable<MemberTaskViewModel> GetAll(DateTime createDate);
     }
 }

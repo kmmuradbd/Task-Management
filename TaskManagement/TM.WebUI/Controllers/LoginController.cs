@@ -1,4 +1,5 @@
-﻿using Serilog;
+﻿using Microsoft.Ajax.Utilities;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -11,6 +12,7 @@ using System.Web.Security;
 using TM.Infrastructure;
 using TM.Service.Interface;
 using TM.Service.ViewModel;
+using TM.WebUI.SignalR;
 
 namespace TM.WebUI.Controllers
 {
@@ -67,7 +69,8 @@ namespace TM.WebUI.Controllers
                     .CreateLogger();
 
                 log.Information("User {User} logged in from IP {IP} at {Time}", username, wsIP, DateTime.Now);
-
+                NotificationComponent NC = new NotificationComponent();
+                NC.RegisterNotification(DateTime.Now, username);
 
                 return Redirect("/Home");
 

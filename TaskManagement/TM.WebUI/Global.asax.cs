@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.SqlClient;
 using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
@@ -11,18 +12,39 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
 using TM.Infrastructure;
+using TM.WebUI.SignalR;
 
 namespace TM.WebUI
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        string con = ConfigurationManager.ConnectionStrings["sqlConString"].ConnectionString;
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            // Start Sql Dependency
+            SqlDependency.Start(con);
         }
+        protected void Session_Start(object sender, EventArgs e)
+        {
+            NotificationComponent NC = new NotificationComponent();
+            var currentTime = DateTime.Now;
+            HttpContext.Current.Session["LastUpdated"] = currentTime;
+            string memberId = HttpContext.Current.Session["userName"]?.ToString();
+            NC.RegisterNotification(currentTime, memberId);
+
+        }
+
+        protected void Application_End()
+        {
+            // Stop Sql Dependency
+            SqlDependency.Stop(con);
+        }
+
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {

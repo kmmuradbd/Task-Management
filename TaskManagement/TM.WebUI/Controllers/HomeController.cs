@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using System.Web.Security;
 using TM.Infrastructure;
 using TM.Service.Interface;
+using TM.WebUI.SignalR;
 
 namespace TM.WebUI.Controllers
 {
@@ -16,10 +17,12 @@ namespace TM.WebUI.Controllers
     {
         protected readonly IUserService AppUser;
         protected readonly IMasterMenuService AppMasterMenu;
-        public HomeController(IUserService user, IMasterMenuService masterMenu)
+        protected readonly IMemberTaskService AppTask;
+        public HomeController(IUserService user, IMasterMenuService masterMenu, IMemberTaskService memberTask)
         {
             this.AppUser = user;
             this.AppMasterMenu = masterMenu;
+            this.AppTask = memberTask;
         }
        
         public ActionResult Index()
@@ -28,7 +31,17 @@ namespace TM.WebUI.Controllers
             Session["menu"] = data;
             return View();
         }
-       
+
+        public JsonResult GetNotificationContacts()
+        {
+            var noticiationRegisterTime = Session["LastUpdated"] != null ? Convert.ToDateTime(Session["LastUpdated"]) : DateTime.Now;
+            NotificationComponent NC = new NotificationComponent();
+            var list = AppTask.GetAll(noticiationRegisterTime);
+            // Update session to get new added contacts only notification)
+            Session["LastUpdated"] = DateTime.Now;
+            return new JsonResult { Data = list, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

@@ -67,7 +67,7 @@ namespace TM.Service.Service
                     if (oldMemberTask.WorkStartDate.HasValue && oldMemberTask.WorkEndDate.HasValue)
                     {
                         TimeSpan timeSpan = oldMemberTask.WorkEndDate.Value - oldMemberTask.WorkStartDate.Value;
-                        oldMemberTask.Duration = timeSpan;
+                        oldMemberTask.Duration = timeSpan.ToString();
                     }
 
                 }
@@ -142,7 +142,37 @@ namespace TM.Service.Service
                                       CreatedDate = memberTask.CreatedDate,
                                       UpdatedBy = memberTask.UpdatedBy,
                                       UpdatedDate = memberTask.UpdatedDate,
-                                  }).ToList();
+                                  }).OrderByDescending(o=> o.CreatedDate).ToList();
+            return memberTaskList;
+        }
+
+        public IEnumerable<MemberTaskViewModel> GetAll(DateTime createDate)
+        {
+            TMIdentity identity = (TMIdentity)Thread.CurrentPrincipal.Identity;
+            var memberTaskList = (from memberTask in RepoMemberTask.GetAll(r => r.MemberId==identity.Id && r.CreatedDate> createDate && !r.IsArchived)
+                                  orderby memberTask.Name
+                                  select new MemberTaskViewModel()
+                                  {
+                                      Id = memberTask.Id,
+                                      IsActive = memberTask.IsActive,
+                                      Name = memberTask.Name,
+                                     // ProjectId = memberTask.ProjectId,
+                                     // ProjectName = RepoProject.Get(memberTask.ProjectId).Name,
+                                     // MemberId = memberTask.MemberId,
+                                     // MemberName = RepoUser.Get(r => r.Id == memberTask.MemberId).FullName,
+                                      Status = memberTask.Status,
+                                      //AssignDate = memberTask.AssignDate,
+                                     // WorkStartDate = memberTask.WorkStartDate,
+                                     // WorkEndDate = memberTask.WorkEndDate,
+                                      // Duration = memberTask.Duration,
+                                      //Comments = memberTask.Comments,
+                                     // Remarks = memberTask.Remarks,
+                                     // IsArchived = memberTask.IsArchived,
+                                     // CreatedBy = memberTask.CreatedBy,
+                                     // CreatedDate = memberTask.CreatedDate,
+                                    //  UpdatedBy = memberTask.UpdatedBy,
+                                    //  UpdatedDate = memberTask.UpdatedDate,
+                                  }).OrderByDescending(a => a.CreatedDate).ToList();
             return memberTaskList;
         }
 

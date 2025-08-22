@@ -121,3 +121,16 @@ D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\System.Threading.T
 D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\EntityFramework.SqlServer.dll
 D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\EntityFramework.SqlServer.xml
 D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\UIHtmlHelper.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\Microsoft.Owin.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\Microsoft.Owin.Security.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\Owin.dll
+D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\Microsoft.AspNet.SignalR.Core.pdb
+D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\Microsoft.Owin.xml
+D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\GitHub Project\Task-Management\TaskManagement\TM.WebUI\bin\Microsoft.Owin.Security.xml

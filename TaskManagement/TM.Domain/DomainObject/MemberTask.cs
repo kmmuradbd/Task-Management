@@ -19,7 +19,7 @@ namespace TM.Domain.DomainObject
         public DateTime AssignDate { get; set; }
         public Nullable<DateTime> WorkStartDate { get; set; }
         public Nullable<DateTime> WorkEndDate { get; set; }
-        public TimeSpan Duration { get; set; }
+        public string Duration { get; set; }
         public string Comments { get; set; }
         public string Remarks { get; set; }
 

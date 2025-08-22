@@ -15,15 +15,20 @@
     <title>@ViewBag.Title</title>
 
     @Styles.Render("~/Content/bootstrapcss")
-    @Styles.Render("~/Content/paginationcss")
-    @Styles.Render("~/Content/customcss")
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrapjs")
-    @Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render("~/bundles/customjs")
-    @Scripts.Render("~/bundles/paginationjs")
+        @Styles.Render("~/Content/paginationcss")
+        @Styles.Render("~/Content/customcss")
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrapjs")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/customjs")
+        @Scripts.Render("~/bundles/paginationjs")
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/uy-style.css" rel="stylesheet" />
     <link href="~/Content/select2.css" rel="stylesheet" />
-    <script src="~/Scripts/js/select2.js"></script>
+    <script src="~/Scripts/select2.js"></script>
+
+
+
 
 
 </head>
@@ -56,14 +61,37 @@
     <div class="navbar navbar-inverse navbar-fixed-top hidden-xs" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                <a class="navbar-brand" href="/Admin/Home">
+                <!-- Toggle button for mobile -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- Brand / Logo -->
+                <a class="navbar-brand" href="/Home">
                     <img src="~/images/logo.png" alt="logo" width="150">
                 </a>
+
+
             </div>
+
+
             <div class="navbar-collapse collapse navbar-custom">
+
                 <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <span class="noti glyphicon glyphicon-bell" style=" margin-top: 20px; color: white; font-size: large;"><span class="count"> </span></span>
+
+                        <div class="noti-content">
+                            <div class="noti-top-arrow"></div>
+                            <ul id="notiContent"></ul>
+                        </div>
+                    </li>
+
                     <li class="dropdown">
+
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             @identity.Name
                             <i class="fa fa-angle-down"></i>
@@ -155,7 +183,7 @@
                                             <p class="panel-title">
                                                 @if (item.Id == 1)
                                                 {
-                                                   <a href="/Home"><i class="fa fa-home"></i> Home</a>
+                                                    <a href="/Home"><i class="fa fa-home"></i> Home</a>
                                                 }
                                                 else
                                                 {
@@ -201,9 +229,31 @@
             </div>
         </div>
     </div>
+    @*<div class="notify">
+            <div class="notify-close"></div>
+            <div class="notify-inner">
+                <ul>
+                    <li>
+                        <div>New Policy Created by <a href="#">01779878433</a>, <a href="#">Khan Zahan</a></div>
+                        <a href="#" class="common-btn">APPROVE</a>
+                    </li>
+                    <li>
+                        <div>New Claim by <a href="#">01989723232</a> Approve Need</div>
+                        <a href="#" class="common-btn">APPROVE</a>
+                    </li>
+                    <li>
+                        <div>New Policy Created by <a href="#">01779878433</a>, <a href="#">Khan Zahan</a></div>
+                    </li>
+                </ul>
+                <a href="#">Clear All</a>
+            </div>
+            <div class="notify-overlay"></div>
+        </div>*@
 
 
     <script>
+
+
         $('.topMenulink').on('click', function (e) {
             e.preventDefault();
             e.stopImmediatePropagation(); // Prevent all further handlers
@@ -251,10 +301,25 @@
                 $(".sidebar").slideToggle(500);
             });
         });
+
     </script>
+
+    <!-- 1. jQuery first -->
+    <!-- jQuery 3.3.1 -->
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <!-- 2. SignalR client -->
+    <script src="~/Scripts/jquery.signalR-2.3.0.min.js"></script>
+    <!-- 3. Auto-generated hubs script -->
+    <script src="/signalr/hubs"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!-- 4. Your custom JS -->
+    <script src="~/Scripts/main.js"></script>
+
     <script src="~/Scripts/jquery.validate.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
     <script src="~/Scripts/custom-datetime-validate.js"></script>
+
+
     @RenderSection("scripts", required: false)
 
 </body>
